@@ -25,6 +25,7 @@ html {
 body {
     font-family: $font-primary;
     background-color: $clr-light-2;
+    height: 100vh;
 }
 
 .btn {
@@ -103,9 +104,10 @@ body {
 
 .chat-area {
     background-color: $clr-light-1;
-    min-height: 60rem;
+    // min-height: 60rem;
     padding: 2rem 1rem;
     max-height: 70vh;
+    height: 70vh;
     overflow: auto;
 
     .msg-box {
@@ -173,6 +175,10 @@ body {
         border-radius: .5rem;
 
         font-size: 1.7rem;
+
+        &::placeholder {
+            font-size: 1.5rem;
+        }
     }
 
     .btn-send {
@@ -231,5 +237,11 @@ body {
             font-size: 2rem;
             color: $clr-light-2;
         }
+    }
+}
+
+@media (max-width:480px) {
+    html {
+        font-size: 50%;
     }
 }

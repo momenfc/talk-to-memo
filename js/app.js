@@ -161,7 +161,7 @@ function getTime() {
     currentDate.getHours() +
     'and' +
     currentDate.getMinutes() +
-    'second';
+    'minutes';
 
   return { timeToShow, timeToRead };
 }
