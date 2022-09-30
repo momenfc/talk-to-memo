@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@400;600&display=swap');
+
+//  VARS
+$font-primary: 'Roboto', sans-serif;
+$font-robot: 'Roboto Mono', monospace;
+
+$clr-light-2: #d4f0fc;
+$clr-light-1: #89d6fb;
+$clr-primary: #02a9f7;
+$clr-dark-1: #02577a;
+$clr-dark-2: #01303f;
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font-primary;
+    background-color: $clr-light-2;
+}
+
+.btn {
+    border: none;
+    background: none;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.root {
+    // padding: 3rem 0 0;
+}
+
+.container {
+    max-width: 90rem;
+    margin: auto;
+}
+
+.avatar {
+    padding: .5rem;
+    background-color: $clr-light-2;
+    border-radius: 50%;
+    min-width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: $clr-dark-1;
+
+    img {
+        width: 2.8rem;
+    }
+
+
+    &.large {
+        width: 8rem;
+        height: 8rem;
+
+        img {
+            width: 5rem;
+        }
+
+    }
+}
+
+.hint {
+    // font-family: $font-robot;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    color: $clr-dark-2;
+    padding: 1rem .5rem;
+}
+
+.header {
+    background-color: $clr-primary;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    h2 {
+        font-family: $font-robot;
+        font-size: 2.2rem;
+        text-transform: capitalize;
+        color: $clr-light-2;
+    }
+}
+
+.chat-area {
+    background-color: $clr-light-1;
+    min-height: 60rem;
+    padding: 2rem 1rem;
+    max-height: 70vh;
+    overflow: auto;
+
+    .msg-box {
+        background-color: $clr-dark-1;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 3rem;
+        padding: .5rem 0;
+        margin-bottom: .5rem;
+        padding-inline-end: 4rem;
+        width: fit-content;
+        // max-width: 75%;
+
+        .text {
+            font-size: 1.8rem;
+            color: $clr-light-2;
+        }
+
+
+        &.robot {
+            background-color: $clr-dark-2;
+            flex-direction: row-reverse;
+            padding-inline-end: 0;
+            padding-inline-start: 4rem;
+            margin-inline-start: auto;
+
+            .text {
+                font-family: $font-robot;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $clr-dark-2;
+    padding: .5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .btn-record {
+
+        background-color: $clr-light-2;
+        border-radius: 50%;
+        padding: 1rem;
+
+        img {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+
+        &.active {
+            background-color: #ff3a3a;
+
+        }
+    }
+
+    .input-msg {
+        flex: .5 1 40%;
+        border: none;
+        height: 5rem;
+        padding: 1rem 1.5rem;
+        border-radius: .5rem;
+
+        font-size: 1.7rem;
+    }
+
+    .btn-send {
+        img {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+    }
+}
+
+.floating-box {
+    width: 40rem;
+    max-width: 100%;
+    height: 20rem;
+    background-color: $clr-light-2;
+    border-radius: 1rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.521);
+
+    .title {
+        font-family: $font-robot;
+        font-size: 2.4rem;
+        text-transform: capitalize;
+
+    }
+
+    .form {
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+
+        .input-name {
+            width: 20rem;
+            height: 100%;
+            padding: 1rem;
+            outline: none;
+            font-size: 2rem;
+            color: $clr-dark-1;
+
+        }
+
+        .start-chat {
+            height: 100%;
+            background-color: $clr-primary;
+            padding: .5rem 2rem;
+            font-size: 2rem;
+            color: $clr-light-2;
+        }
+    }
+}
